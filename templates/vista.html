@@ -10,14 +10,13 @@
         <h1>PERSONAJES</h1>
 
         <h2>La serie de Rick and Morfy tine miles de personajes ser basada en un multuiverso, veamos algonos de ellos:</h2>
-
         <main>
             <div class="contenedor">
                 {% for personaje in personajes %}
-                <div class="tarjeta">
-                <img src="{{personaje.imagen}}" alt="{{personaje.nombre}}">
-                <p>{{personaje.nombre}}</p>
-                </div>
+                    <div class="tarjeta">
+                        <img src="{{personaje.imagen}}" alt="{{personaje.nombre}}">
+                        <p>{{personaje.nombre}}</p>
+                    </div>
                 {% endfor %}
             </div>
         </main>
