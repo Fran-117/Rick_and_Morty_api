@@ -23,7 +23,7 @@ body {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Sombra tipo Canva */
+  box-shadow: 0 10 8px rgba(0,0,0,0.5); /* Sombra tipo Canva */
   text-align: center;
   color: white;
   margin: 20px;
@@ -40,6 +40,11 @@ body {
   font-size: 1.1em;
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    gap: 20px;
+    }
 
 h1 {
     text-align: center;
