@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Personajes</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    </head>
+
+    <body>
+        <h1>PERSONAJES</h1>
+
+        <h2>La serie de Rick and Morfy tine miles de personajes ser basada en un multuiverso, veamos algonos de ellos:</h2>
+
+        <main>
+            <div class="contenedor">
+                {% for personaje in personajes %}
+                <div class="tarjeta">
+                <img src="{{personaje.imagen}}" alt="{{personaje.nombre}}">
+                <p>{{personaje.nombre}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </main>
+    </body>
+</html>
