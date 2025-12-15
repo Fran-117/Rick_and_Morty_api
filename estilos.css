@@ -18,6 +18,28 @@ body {
     background-attachment: fixed;
     }
 
+.tarjeta {
+  width: 200px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Sombra tipo Canva */
+  text-align: center;
+  color: white;
+  margin: 20px;
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.tarjeta p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
 
 h1 {
     text-align: center;
