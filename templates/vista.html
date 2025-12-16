@@ -13,21 +13,33 @@
         <main>
             <div class="contenedor">
                 {% for personaje in personajes %}
-                    <div class="tarjeta" oneclick="abrirModal()">
+                    <div class="tarjeta" onclick="abrirModal()">
                         <img src="{{personaje.imagen}}" alt="{{personaje.nombre}}">
                         <p>{{personaje.nombre}}</p>
                     </div>
                 {% endfor %}
             </div>
 
-            <div>
-                <modal id="miModal" class="modal-contenido">
+            <div modal id="miModal" class="modal">
                     <div class="modal-contenido">
-                        <span class="cerrar" onclick="cerrarModal()">x</span>
-                        <h2>Información del Personaje</h2>
+                        <span class="cerrar" onclick="cerrarModal()">X</span>
+                        <h3 id="modalNombre">Información del Personaje</h3>
                         <p id="infoPersonaje"></p>
                     </div>
             </div>
+
+            <script>
+                    function abrirModal() {
+                        document.getElementById("miModal").style.display = "flex";
+                        document.getElementById('modalNombre').innerText = nombre;
+                        document.getElementById('infoPersonaje').innerText = 'Más detalles aquí...';
+                    }
+                    
+                    function cerrarModal() {
+                        document.getElementById("miModal").style.display = "none";
+                    }
+            </script>
+
         </main>
     </body>
 </html>
