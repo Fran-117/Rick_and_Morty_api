@@ -90,3 +90,9 @@ h4 {
   width: 300px;
   text-align: center;
 }
+
+.cerrar {
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+}
