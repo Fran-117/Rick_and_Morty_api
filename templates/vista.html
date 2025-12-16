@@ -13,7 +13,7 @@
         <main>
             <div class="contenedor">
                 {% for personaje in personajes %}
-                    <div class="tarjeta" onclick="abrirModal('{{ personaje.nombre, personaje.genero, personaje.lugar,episodio.nombre, episodio.fecha }}')">
+                    <div class="tarjeta" onclick="abrirModal('{{ personaje.nombre }}', '{{ personaje.genero }}')">
                         <img src="{{personaje.imagen}}" alt="{{personaje.nombre}}">
                         <p>{{personaje.nombre}}</p>
                     </div>
@@ -24,15 +24,15 @@
                     <div class="modal-contenido">
                         <span class="cerrar" onclick="cerrarModal()">X</span>
                         <h3 id="modalNombre"></h3>
-                        <p id="infoPersonaje"></p>
+                        <p id="modalGenero"></p>
                     </div>
             </div>
 
             <script>
-                    function abrirModal(nombre) {
+                    function abrirModal(nombre, genero) {
                         document.getElementById("miModal").style.display = "flex";
                         document.getElementById('modalNombre').innerText = 'Información de ' + nombre;
-                        document.getElementById('infoPersonaje').innerText = 'Más detalles aquí...';
+                        document.getElementById('modalGenero').innerText = 'Género: ' + genero ;
                     }
 
                     function cerrarModal() {
