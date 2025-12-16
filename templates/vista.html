@@ -13,11 +13,20 @@
         <main>
             <div class="contenedor">
                 {% for personaje in personajes %}
-                    <div class="tarjeta">
+                    <div class="tarjeta" oneclick="abrirModal()">
                         <img src="{{personaje.imagen}}" alt="{{personaje.nombre}}">
                         <p>{{personaje.nombre}}</p>
                     </div>
                 {% endfor %}
+            </div>
+
+            <div>
+                <modal id="miModal" class="modal-contenido">
+                    <div class="modal-contenido">
+                        <span class="cerrar" onclick="cerrarModal()">x</span>
+                        <h2>Información del Personaje</h2>
+                        <p id="infoPersonaje"></p>
+                    </div>
             </div>
         </main>
     </body>
